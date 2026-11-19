@@ -3,19 +3,23 @@ C++ program writing a generic stack using templates ,testing with int ,float and
 
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 template <class T>
 class Stack {
 private:
+
     static const int MAX = 5;
     T a[MAX];
     int top;
 
 public:
+
     Stack() {
         top = -1;
     }
+    
     void push(T x) {
         if (top == MAX - 1) {
             cout << "Stack Overflow\n";
@@ -42,7 +46,9 @@ public:
         cout << "\n";
     }
 };
-int main() {
+
+int main(){
+
     Stack<int> s1;
     s1.push(10);
     s1.push(20);
